@@ -1,5 +1,6 @@
-addi t0 x0 -1
-addi t1 x0 1
+addi t0 x0 20
+addi t1 x0 10
+
 beq s0 s0 branch0 
 
 branch0:
@@ -25,7 +26,7 @@ b:
     jal x0, end
 
 branch5:
-    jalr ra, ra, b
+    jalr ra, ra, 0
 
 end:
     add x0 x0 x0
