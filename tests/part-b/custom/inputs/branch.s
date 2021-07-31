@@ -1,33 +1,30 @@
-addi t0 x0 20
+addi t0 x0 -10
 addi t1 x0 10
 
-beq s0 s0 branch0 
+b0:
+    bne s0 x0 b1
 
-branch0:
-    bne s0 x0 branch1
+b1:
+    bne s0 s0 b0
+    beq s0 s0 b2
 
-branch1:
-    bne s0 s0 branch0
-    beq s0 s0 branch3
+b2:
+    blt x0 t0 b3
+    bltu x0 t0 b3
 
-branch2:
-    blt x0 t0 branch3
-    bltu x0 t0 branch3
+b3:
+    bge x0 t1 b4
+    bgeu t0 x0 b4
 
-branch3:
-    bge x0 t1 branch4
-    bgeu t0 x0 branch4
+b4:
+    jal ra b5
 
-branch4:
-    blt t0 x0 branch5  
-    jal ra, branch3
+b5:
+    jal x0 exit
 
-b:
-    jal x0, end
-
-branch5:
-    jalr ra, ra, 0
-
-end:
+b6:
+    jalr ra ra 0
+    
+exit:
     add x0 x0 x0
-     
+    

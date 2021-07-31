@@ -40,3 +40,20 @@ sb s0 0xa2(t0)
 lb ra 0xa2(t0)
 sb s0 0xa3(t0)
 lb ra 0xa3(t0)
+auipc ra 1231
+lui s0 74565
+addi s0 s0 1656
+add s0 x0 s0
+addi t0 x0 10
+mul t0 t0 t0
+sub t1 s0 t0
+sll t1 s0 t0
+mulh t1 s0 t0
+mulhu t1 s0 t0
+slt t1 s0 t0
+slt t1 t0 s0
+xor t1 s0 t0
+srl t1 s0 t0
+sra t1 s0 t0
+or t1 s0 t0
+and t1 s0 t0
