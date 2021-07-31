@@ -24,9 +24,6 @@ b4:
 b5:
     jal x0 exit
 
-b6:
-    jalr ra ra 0
-
 b7:
     jalr ra ra 0
 
